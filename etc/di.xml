@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="zero1_indexes_reindexallinvalid" xsi:type="object">Zero1\Indexes\Console\ReindexAllInvalid</item>
+                <item name="zero1_indexes_updatemview" xsi:type="object">Zero1\Indexes\Console\UpdateMview</item>
+                <item name="zero1_indexes_cleanchangelogs" xsi:type="object">Zero1\Indexes\Console\CleanChangelogs</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <!--<type name="Magento\Framework\Mview\View">-->
+    <!--    <arguments>-->
+    <!--        <argument name="changelogBatchSize" xsi:type="array">-->
+    <!--            <item name="catalog_category_product" xsi:type="number">2000</item>-->
+    <!--            <item name="catalog_product_category" xsi:type="number">2000</item>-->
+    <!--            <item name="catalogrule_rule" xsi:type="number">2000</item>-->
+    <!--            <item name="catalog_product_attribute" xsi:type="number">2000</item>-->
+    <!--            <item name="cataloginventory_stock" xsi:type="number">2000</item>-->
+    <!--            <item name="catalog_product_price" xsi:type="number">2000</item>-->
+    <!--            <item name="catalogrule_product" xsi:type="number">2000</item>-->
+    <!--            <item name="catalogsearch_fulltext" xsi:type="number">2000</item>-->
+    <!--            <item name="targetrule_product_rule" xsi:type="number">2000</item>-->
+    <!--            <item name="targetrule_rule_product" xsi:type="number">2000</item>-->
+    <!--            <item name="salesrule_rule" xsi:type="number">2000</item>-->
+    <!--            <item name="catalogpermissions_category" xsi:type="number">2000</item>-->
+    <!--            <item name="catalogpermissions_product" xsi:type="number">2000</item>-->
+    <!--        </argument>-->
+    <!--    </arguments>-->
+    <!--</type>-->
+    
+    <preference for="Magento\Framework\Mview\View" type="Zero1\Indexes\MagentoFramework\Mview\View" />
+</config>
